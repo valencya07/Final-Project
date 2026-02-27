@@ -23,7 +23,7 @@ def render_sidebar(predictor):
         t = st.sidebar.slider("Adjust Deadline", 10, 100, int(h_t))
         c = st.sidebar.slider("Adjust Budget", 1000, 10000, int(h_c))
         o = st.sidebar.slider("Adjust OAR", 0.0, 1.0, float(h_o))
-        return mode, (t, c, o), (h_t, h_c, h_o), selected_job
+        return mode, (t, c, o), baseline, selected_job
 
 def display_strategy_card(strategy, selected_role=None):
     header_text = f"Strategi Rekomendasi: {selected_role}" if selected_role else "Rekomendasi Strategi Utama"
